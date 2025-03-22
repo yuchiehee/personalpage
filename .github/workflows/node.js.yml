@@ -17,13 +17,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Verify yarn.lock exists
+      run: ls -la
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
 
-    - run: yarn install --frozen-lockfile
+    - name: Install Dependencies
+      run: yarn install --frozen-lockfile
+
     - run: yarn build
     - run: yarn test
 
