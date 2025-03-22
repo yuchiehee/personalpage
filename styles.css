@@ -83,6 +83,7 @@ button:hover {
     height: auto; 
     max-width: 100%;
     display: block;
+    border-radius: 0%;
     margin: 20px auto; 
 }
 
