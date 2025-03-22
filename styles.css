@@ -80,8 +80,10 @@ button:hover {
 
 .profile-photo {
     width: 200px;
-    height: 200px;
-    margin-top: 5px;
+    height: auto; 
+    max-width: 100%;
+    display: block;
+    margin: 20px auto; 
 }
 
 #messages {
